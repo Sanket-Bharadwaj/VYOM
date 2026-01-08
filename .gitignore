@@ -4,6 +4,7 @@ dist/
 *.o
 *.out
 *.exe
+*.res
 vy
 vyom
 
