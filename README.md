@@ -44,9 +44,7 @@ This release establishes a stable and usable foundation.
 
 ## ⬇️ Download (Windows)
 
-### ✅ Recommended (Most Users)
-
-👉 **Download Vyom-0.2-Windows.zip from GitHub Releases**
+👉 **[Download Vyom-0.2-Windows.zip](https://github.com/Sanket-Bharadwaj/VYOM/releases/tag/v0.2)**
 
 Includes:
 - `vyom.exe`
@@ -73,15 +71,10 @@ No compiler required.
 Create a file `test.vy`:
 
 ```vy
-x = 10
-name = "Vyom"
-
-print "x = " + x
-print name + " Lang"
-
-if x < 20:
-    print "small number"
+print "Hello, Vyom!"
 ```
+
+For more examples, visit the [EXAMPLES](https://github.com/Sanket-Bharadwaj/VYOM/tree/main/examples)
 
 ---
 
