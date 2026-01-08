@@ -1,14 +1,10 @@
 # =========================================
 # Vyom v0.2 — test.vy
-# ⚠️ Internal testing file — NOT for end users
-# =========================================
-#
+# Internal test suite (NOT for users)
 # This file is used to validate:
 # - error messages
 # - warnings
 # - edge cases
-#
-# For user-friendly examples, see main.vy
 # =========================================
 
 
