@@ -44,7 +44,7 @@ This release establishes a stable and usable foundation.
 
 ## ⬇️ Download (Windows)
 
-👉 **[Download Vyom-0.2-Windows.zip](https://github.com/Sanket-Bharadwaj/VYOM/releases/tag/v0.2)**
+👉 **[Download Vyom-0.2-Windows.zip](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.2/Vyom-0.2-Windows.zip)**
 
 Includes:
 - `vyom.exe`
