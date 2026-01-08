@@ -24,6 +24,18 @@ Vyom is a **learning-first language** — ideal for understanding how programmin
 This release establishes a stable and usable foundation.
 
 ---
+## ✨ Features (v0.1)
+
+- Variable assignment using `set`
+- Numbers & strings
+- Basic math expressions (`+ - * /`)
+- `print`
+- `if / elif / else`
+- `repeat N:`
+- Comments using `#`
+- Indentation-based blocks
+- Simple, predictable execution model
+- Command-line flags: `--version`, `--help`
 
 ## ✨ Features (v0.2)
 
