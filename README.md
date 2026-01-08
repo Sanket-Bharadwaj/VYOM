@@ -1,11 +1,19 @@
-# 🌌 Vyom — Minimal Scripting Language (v0.1 Core)
+# 🌌 Vyom — Minimal Scripting Language
 
-Vyom is a small, indentation-based scripting language written in C.  
-This v0.1 release focuses on a clean, simple and stable core.
+Vyom is a small, indentation-based scripting language written in C —
+focused on **simplicity, readability, and predictable behavior**.
 
-## ✨ Features (v0.1)
+This document preserves version history as the language evolves.
 
-- variables (`set`)
+---
+
+## 🟢 Vyom v0.1 — Core (Initial Release)
+
+A minimal, stable foundation to start the language journey.
+
+### ✨ Features (v0.1)
+
+- variables using `set`
 - numbers & strings
 - math expressions (`+  -  *  /`)
 - `print`
@@ -13,11 +21,9 @@ This v0.1 release focuses on a clean, simple and stable core.
 - `repeat N:`
 - comments `#`
 - indentation-based blocks
-- command-line flags (`--version`, `--help`)
+- `--version` and `--help`
 
----
-
-## 🛠 Build
+### 🛠 Build (v0.1 style)
 
 ```bash
 gcc src/vy.c -o vy
@@ -25,48 +31,70 @@ gcc src/vy.c -o vy
 
 ---
 
-## ▶️ Run a program
+## 🚀 Vyom v0.2 — Stability & String Concatenation (Current)
+
+This version focuses on **cleaner syntax, better error messages,
+and more natural variable assignment**.
+
+### ✨ New in v0.2
+
+- assignment using `=` (no `set`)
+- case‑sensitive variables
+- whitespace‑tolerant parsing
+- string concatenation:
+
+  ```
+  print "a = " + x
+  print x + " = value"
+  print name + " Lang"
+  ```
+
+- `type(x)` → prints `number` or `string`
+- `exit` to stop execution
+- improved error messages
+
+### 🧪 Examples
+
+```vy
+x = 10
+name = "Vyom"
+print "a = " + x
+print name + " Lang"
+```
+
+### 🔧 Build (v0.2)
 
 ```bash
-./vy examples/hello.vy
+gcc src/vy.c -o vyom
+./vyom examples/test.vy
 ```
 
 ---
 
-## 🖥 Command-line usage
+## 📜 Changelog
 
-Show help:
+### v0.2
+- added string concatenation
+- added `exit`
+- switched to `=` for assignment
+- improved parsing & error messages
 
-```bash
-./vy --help
-```
-
-Show version:
-
-```bash
-./vy --version
-```
-
-Run any Vyom script:
-
-```bash
-./vy <file.vy>
-```
+### v0.1
+- initial interpreter core
+- variables, print, repeat, conditionals
 
 ---
 
-## 📂 Examples
+## 🛣 Roadmap
 
-```
-examples/hello.vy
-examples/math_demo.vy
-examples/conditions.vy
-examples/repeat_pattern.vy
-```
+**v0.3 (planned)**  
+- improved expression engine  
+- optional `print()` form  
+- lists / arrays  
+- performance upgrades  
 
 ---
 
-## 🎯 Philosophy
+## 📜 License
 
-Vyom keeps the core small and stable first,  
-and adds new features gradually in future versions.
+MIT — learn, build, explore 🚀

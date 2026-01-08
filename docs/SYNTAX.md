@@ -1,119 +1,140 @@
-# 📘 Vyom Syntax — v0.1 Core
+# 🌌 Vyom --- Language Syntax Guide (v0.2)
 
-This document describes the syntax and features available in the Vyom v0.1 core release.
+Vyom is a minimal, indentation‑based scripting language focused on
+clarity and stability. Version **v0.2** extends the core with safer
+assignment rules, better errors, `exit` support, string concatenation in
+`print`, and `type(x)` inspection.
 
----
+------------------------------------------------------------------------
 
-## 🧩 Variables
+## ✨ Core Concepts
 
-```text
-set x = 10
-set name = "Vyom"
-```
+-   indentation defines blocks (spaces recommended)
+-   variables are **case‑sensitive**
+-   assignment uses `=` (no `set` from v0.2 onward)
+-   numbers and strings are dynamically typed
+-   whitespace around operators is flexible
 
-- supports numbers and strings  
-- assignment always uses `set`
+------------------------------------------------------------------------
 
----
+## 📝 Variables & Assignment
 
-## 🖨 Print
+    x = 10
+    name = "Vyom"
+    pi = 3.14
 
-```text
-print x
-print "hello"
-```
+Rules:
 
-- prints either variable values or string literals
+-   variable names must start with a letter or `_`
+-   may contain letters, digits, `_`
+-   `A` and `a` are **different variables**
+-   invalid identifiers raise clear errors
 
----
+------------------------------------------------------------------------
 
-## ➕ Math Expressions
-
-```text
-set a = x + 5
-set b = a * 2
-set c = b - 3
-```
+## 🧮 Expressions
 
 Supported operators:
 
-```
-+   -   *   /
-```
+    +   -   *   /
 
-Expressions may use literals or variables.
+Examples:
 
----
+    a = 10 + 5
+    b = a * 2
 
-## 🔀 Conditionals
+Expressions may use variables, numbers, or both.
 
-```text
-if x > 5:
-    print "big"
-elif x == 5:
-    print "equal"
-else:
-    print "small"
-```
+------------------------------------------------------------------------
 
-Comparison operators:
+## 🖨 print
 
-```
->   <   ==   !=   >=   <=
-```
+### Print values
 
-Blocks are determined by indentation.
+    print x
+    print "Hello"
+    print 10 + 5
 
----
+### String concatenation
 
-## 🔁 Repeat Loop
+    print "a = " + a
+    print name + " Lang"
 
-```text
-repeat 3:
-    print "hi"
-```
+### Type inspection
 
-Executes the indented block N times.
+    print type(x)
+    # → number / string
 
----
+------------------------------------------------------------------------
 
-## ⬇️ Indentation Rules
+## 🔁 repeat blocks
 
-- blocks are controlled by **indent level**
-- recommended to use spaces (avoid mixing tabs + spaces)
-- no `{}` or `end` keyword
+    repeat 3:
+        print "Hi"
 
-Example:
+------------------------------------------------------------------------
 
-```text
-if x > 0:
-    print "inside block"
-print "outside block"
-```
+## 🔀 Conditions
 
----
+    if x > 10:
+        print "big"
+    elif x == 10:
+        print "equal"
+    else:
+        print "small"
 
-## 📝 Comments
+Supported comparison operators:
 
-```text
-# this is a comment
-```
+    >  <  ==  !=  >=  <=
 
-Anything after `#` on a line is ignored.
+------------------------------------------------------------------------
 
----
+## ⛔ exit
 
-## 🖥 CLI Commands
+Stops execution immediately inside any block:
 
-```bash
-vy --help
-vy --version
-vy <file.vy>
-```
+    if x < 0:
+        print "Stopping"
+        exit
 
----
+------------------------------------------------------------------------
 
-## 🌱 Notes
+## 💬 Comments
 
-Vyom v0.1 intentionally ships with a **small, stable core**.  
-Advanced features (functions, lists, file I/O, etc.) will be added gradually in future versions.
+    # this is a comment
+
+------------------------------------------------------------------------
+
+## ⚠️ Errors & Warnings
+
+Vyom v0.2 focuses on readable messages like:
+
+    Error (line N): variable "x1-" is not defined
+    Error (line N): invalid variable name "1x"
+
+Program continues where reasonable; fatal issues stop execution.
+
+------------------------------------------------------------------------
+
+## 📌 Notes
+
+-   strings must be on one line
+-   indentation controls scope
+-   unknown statements produce warnings
+
+------------------------------------------------------------------------
+
+## ▶️ Example Program
+
+    x = 5
+    y = 10
+    print "a = " + x
+    print type(y)
+
+    if y > 5:
+        print "ok"
+
+------------------------------------------------------------------------
+
+Vyom keeps the core small and predictable --- features expand carefully
+in future versions.
