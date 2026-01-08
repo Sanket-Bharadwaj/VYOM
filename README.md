@@ -81,7 +81,7 @@ No compiler or additional setup is required.
 
 ### 2️⃣ Write a Vyom program
 
-Create a file `test.vy`:
+Create a file `main.vy`:
 
 ```vy
 print "Hello, Vyom!"
@@ -94,7 +94,7 @@ For more examples, visit the [EXAMPLES](https://github.com/Sanket-Bharadwaj/VYOM
 ### 3️⃣ Run it
 
 ```cmd
-vyom test.vy
+vyom main.vy
 ```
 
 ---
@@ -104,7 +104,7 @@ vyom test.vy
 You can also run `vyom.exe` directly without installation:
 
 ```cmd
-vyom.exe test.vy
+vyom.exe main.vy
 ```
 
 ---

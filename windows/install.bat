@@ -23,7 +23,7 @@ echo.
 echo Installation completed successfully.
 echo.
 echo You can now run Vyom from any terminal using:
-echo     vyom test.vy
+echo     vyom main.vy
 echo.
 echo NOTE:
 echo Please restart Command Prompt or PowerShell

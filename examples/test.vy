@@ -1,91 +1,60 @@
 # =========================================
-# Vyom v0.2 — Full Test Suite
-# This file intentionally includes:
-# - valid code
+# Vyom v0.2 — test.vy
+# ⚠️ Internal testing file — NOT for end users
+# =========================================
+#
+# This file is used to validate:
+# - error messages
 # - warnings
-# - runtime errors
 # - edge cases
+#
+# For user-friendly examples, see main.vy
 # =========================================
 
 
-# ---------- BASIC ASSIGNMENT ----------
-x = 10 
-y   =   5
-msg = "Vyom Lang"
-
-print x
-print y
-print msg
+# ---------- UNDEFINED VARIABLES ----------
+print unknown
+print type(not_defined)
 
 
-# ---------- EXPRESSIONS ----------
-z = x + y
-print z
-
-a = x * y
-print a
-
-b = z / 0        # allowed (prints 0, no crash)
-print b
-
-
-# ---------- STRING CONCAT ----------
-print "a = " + x
-print x + " = value"
-print msg + " rocks"
-
-
-# ---------- TYPE BUILTIN ----------
-print type(x)
-print type(msg)
-
-# Error: variable not defined
-print type(unknown_var)
-
-
-# ---------- UNDEFINED VARIABLE ----------
-print k
-
-
-# ---------- INVALID VARIABLE NAME ----------
+# ---------- INVALID VARIABLE NAMES ----------
 1abc = 10
 a-b = 5
 
 
 # ---------- MISSING RHS ----------
 bad1 =
-bad2 =    
+bad2 =
 
 
-# ---------- IF / ELIF / ELSE ----------
-if x > 10:
-    print "x > 10"
-elif x == 10:
-    print "x == 10"
-else:
-    print "x < 10"
+# ---------- EXPRESSIONS ----------
+x = 10
+y = 0
+
+z = x / y        # division by zero (should not crash)
+print z
 
 
-# ---------- INVALID CONDITION ----------
+# ---------- INVALID OPERATORS ----------
+a = x $ y
+
+
+# ---------- CONDITIONS ----------
+msg = "hello"
+
 if msg > 5:
-    print "this should error"
+    print "invalid comparison"
 
 
 # ---------- REPEAT ----------
-repeat 2:
-    print "repeat works"
-    print x
-
-
-# ---------- INVALID REPEAT ----------
-repeat -3:
+repeat -2:
     print "should not run"
 
 
 # ---------- EXIT ----------
 print "before exit"
 exit
-print "this should NOT print"
+print "this should not print"
 
 
 # ---------- UNKNOWN STATEMENTS ----------
@@ -97,5 +66,5 @@ foo(bar)
 print "this string never ends
 
 
-# ---------- DONE ----------
-print "end of file"
+# ---------- END ----------
+print "test completed"
