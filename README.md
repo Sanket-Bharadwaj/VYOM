@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner/VYOM-Banner.png" alt="Vyom banner" />
+  <img src="assets/VYOM-Banner.png" alt="Vyom banner" />
 </p>
 
 # 🌌 Vyom — Minimal Scripting Language (v0.2)
