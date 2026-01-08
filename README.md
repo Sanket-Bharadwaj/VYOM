@@ -2,13 +2,22 @@
   <img src="assets/VYOM-Banner.png" alt="Vyom banner" />
 </p>
 
-# 🌌 Vyom — Minimal Scripting Language (v0.2)
+<h1 align="center">Vyom</h1>
+<p align="center"><i>Minimal, learning-first scripting language</i></p>
 
-Created and maintained by **Sanket Bharadwaj**
+<p align="center">
+  Created and maintained by <b>Sanket Bharadwaj</b>
+</p>
 
-Vyom is a small, indentation-based scripting language written in C, focused on **simplicity, readability, and predictable behavior**.
+---
 
-Vyom is a **learning-first language** — ideal for understanding how programming languages and interpreters work.
+Vyom is a small, indentation-based scripting language written in C, designed with a strong focus on  
+**simplicity, clarity, and predictable behavior**.
+
+Vyom is built as a **learning-first language** — making it easy to understand how interpreters work,
+how syntax is processed, and how programming languages evolve from a minimal core.
+
+It is intentionally simple, stable, and approachable.
 
 ---
 
