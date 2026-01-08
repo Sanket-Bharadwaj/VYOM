@@ -1,72 +1,199 @@
-# 🌌 Vyom — Minimal Scripting Language
+# 🌌 Vyom — Minimal Scripting Language (v0.2)
 
-Vyom is a small, indentation-based scripting language written in C —
-focused on **simplicity, readability, and predictable behavior**.
+Vyom is a small, indentation‑based scripting language written in C, focused on **simplicity, readability, and predictable behavior**.
 
-This document preserves version history as the language evolves.
+Vyom is designed as a **learning‑first language** — easy to read, easy to reason about, and easy to extend.
 
 ---
 
-## 🟢 Vyom v0.1 — Core (Initial Release)
+## ✅ Who is Vyom for?
 
-A minimal, stable foundation to start the language journey.
+- Beginners learning how programming languages work
+- Students exploring interpreters & compilers
+- Developers who want a tiny scripting language
+- Anyone curious about language design
 
-### ✨ Features (v0.1)
+---
 
-- variables using `set`
-- numbers & strings
-- math expressions (`+  -  *  /`)
+## 🚀 Current Version
+
+**Vyom v0.2 — Stability Core**
+
+This version establishes a stable base and improves usability.
+
+---
+
+## ✨ Features (v0.2)
+
+- Assignment using `=`
+- Numbers & strings
+- String concatenation
+- Expression evaluation (`+ - * /`)
 - `print`
+- `print type(x)`
 - `if / elif / else`
-- `repeat N:`
-- comments `#`
-- indentation-based blocks
-- `--version` and `--help`
+- `repeat`
+- `exit`
+- Comments using `#`
+- Indentation‑based blocks
+- Human‑friendly error messages
+- Command‑line flags: `--version`, `--help`
 
-### 🛠 Build (v0.1 style)
+---
 
-```bash
-gcc src/vy.c -o vy
+## ⬇️ Download (Windows)
+
+Download the Vyom v0.2 Windows package:
+
+👉 **[Download Vyom-0.2-Windows.zip](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.2/Vyom-0.2-Windows.zip)**
+
+Includes:
+- `vyom.exe`
+- installer (`install.bat`)
+- examples
+
+No compiler required. Just download and run.
+
+---
+
+## ▶️ Run Vyom (Windows)
+
+1. Download `vyom.exe`
+2. Open Command Prompt in the folder where `vyom.exe` exists
+3. Run:
+
+```cmd
+vyom test.vy
+
+vyom C:\Users\<your-name>\Desktop\test.vy
 ```
 
 ---
 
-## 🚀 Vyom v0.2 — Stability & String Concatenation (Current)
+### (Optional) Add Vyom to PATH
 
-This version focuses on **cleaner syntax, better error messages,
-and more natural variable assignment**.
+If you add `vyom.exe` to your system PATH, you can run it from anywhere:
 
-### ✨ New in v0.2
+```cmd
+vyom test.vy
+```
 
-- assignment using `=` (no `set`)
-- case‑sensitive variables
-- whitespace‑tolerant parsing
-- string concatenation:
+⚠️ Restart your terminal after running `install.bat` for PATH changes to take effect.
 
-  ```
-  print "a = " + x
-  print x + " = value"
-  print name + " Lang"
-  ```
+---
 
-- `type(x)` → prints `number` or `string`
-- `exit` to stop execution
-- improved error messages
-
-### 🧪 Examples
+## 🧪 Example Program
 
 ```vy
 x = 10
 name = "Vyom"
-print "a = " + x
+
+print "x = " + x
 print name + " Lang"
+
+if x < 20:
+    print "small number"
 ```
 
-### 🔧 Build (v0.2)
+---
+
+## 🖥 Windows — How to Use (IMPORTANT)
+
+### 1️⃣ Download Vyom
+
+Go to **GitHub Releases** and download:
+
+```
+Vyom-0.2-Windows.zip
+```
+
+Extract it anywhere (recommended: `C:\Vyom`).
+
+---
+
+### 2️⃣ Install Vyom (one time)
+
+Double‑click:
+
+```
+install.bat
+```
+
+This will:
+- Add Vyom to your system PATH
+- Allow `vyom` command from any terminal
+
+---
+
+### 3️⃣ Write a Vyom program
+
+Create a file anywhere, for example:
+
+```
+test.vy
+```
+
+```vy
+print "Hello from Vyom"
+```
+
+---
+
+### 4️⃣ Run the program
+
+Open **Command Prompt** or **PowerShell**:
+
+```bat
+vyom test.vy
+```
+
+Output:
+```
+Hello from Vyom
+```
+
+✅ Works from Desktop, VS Code, or any folder.
+
+---
+
+### 5️⃣ Uninstall (optional)
+
+Run:
+```
+uninstall.bat
+```
+
+---
+
+## 🛠 Build from Source (Developers)
+
+### Linux / macOS / Windows (using GCC / MinGW)
 
 ```bash
 gcc src/vy.c -o vyom
+```
+
+Run:
+```bash
 ./vyom examples/test.vy
+```
+
+---
+
+## 📂 Project Structure
+
+```
+VYOM/
+├── src/
+│   └── vy.c
+├── examples/
+│   └── test.vy
+├── windows/
+│   ├── install.bat
+│   ├── uninstall.bat
+│   └── README.txt
+├── docs/
+├── README.md
 ```
 
 ---
@@ -74,27 +201,28 @@ gcc src/vy.c -o vyom
 ## 📜 Changelog
 
 ### v0.2
-- added string concatenation
-- added `exit`
-- switched to `=` for assignment
-- improved parsing & error messages
+- Stable `=` assignment
+- String concatenation
+- `exit` statement
+- Better error handling
+- Windows installer support
 
 ### v0.1
-- initial interpreter core
-- variables, print, repeat, conditionals
+- Initial interpreter core
 
 ---
 
 ## 🛣 Roadmap
 
-**v0.3 (planned)**  
-- improved expression engine  
-- optional `print()` form  
-- lists / arrays  
-- performance upgrades  
+### v0.3 (planned)
+- Functions (`def`)
+- Local scope
+- Lists / arrays
+- Improved expression engine
 
 ---
 
 ## 📜 License
 
-MIT — learn, build, explore 🚀
+MIT License  
+Learn • Build • Explore 🚀
