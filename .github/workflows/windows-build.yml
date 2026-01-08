@@ -1,0 +1,38 @@
+name: Windows Build
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install MinGW (gcc)
+        uses: msys2/setup-msys2@v2
+        with:
+          update: true
+          install: mingw-w64-x86_64-gcc
+
+      - name: Build vyom.exe
+        shell: msys2 {0}
+        run: |
+          gcc src/vy.c -o vyom.exe
+
+      - name: Prepare Windows package
+        run: |
+          mkdir Vyom-0.2-Windows
+          copy vyom.exe Vyom-0.2-Windows\
+          xcopy windows Vyom-0.2-Windows\windows /E /I
+          xcopy examples Vyom-0.2-Windows\examples /E /I
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Vyom-0.2-Windows
+          path: Vyom-0.2-Windows

@@ -1,8 +1,16 @@
+# build outputs
 /build/
+dist/
 *.o
 *.out
 *.exe
+vy
+vyom
+
+# OS junk
 .DS_Store
+Thumbs.db
+
+# editor junk
 .vscode/
 .idea/
-vy
