@@ -4,31 +4,30 @@ on:
   push:
     tags:
       - "v*"
+    branches:
+      - main
+  pull_request:
 
 jobs:
   build-windows:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup MinGW
-        uses: egor-tensin/setup-mingw@v2
+      - name: Setup MSYS2 (GCC)
+        uses: msys2/setup-msys2@v2
+        with:
+          install: mingw-w64-x86_64-gcc
 
       - name: Build Vyom
+        shell: msys2 {0}
         run: |
           gcc src/vy.c -o vyom.exe
 
-      - name: Prepare release folder
-        run: |
-          mkdir dist
-          move vyom.exe dist/
-          xcopy examples dist\\examples /E /I
-          xcopy windows dist\\windows /E /I
-
-      - name: Upload artifact
+      - name: Upload Windows binary
         uses: actions/upload-artifact@v4
         with:
-          name: Vyom-Windows
-          path: dist
+          name: vyom-windows
+          path: vyom.exe
