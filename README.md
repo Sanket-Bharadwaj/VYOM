@@ -99,6 +99,39 @@ vyom main.vy
 
 ---
 
+## 📂 Examples
+
+Vyom uses a **single progressive example file** that demonstrates the language step-by-step.
+
+### `examples/main.vy` (Recommended)
+
+This is the **official demo file** for Vyom v0.2.  
+It shows language features in a clean, learning-friendly order:
+
+- variables & assignment
+- expressions
+- string concatenation
+- type checking
+- conditionals
+- loops (`repeat`)
+
+👉 New users should start here.
+
+---
+
+### About `test.vy` (Internal)
+
+Earlier versions used a `test.vy` file containing:
+- runtime errors
+- invalid syntax
+- edge cases
+
+This file is **not included in v0.2 releases** to avoid confusing users.
+
+Advanced users can create their own test files if needed.
+
+---
+
 ## ⚙️ Power Users
 
 You can also run `vyom.exe` directly without installation:
