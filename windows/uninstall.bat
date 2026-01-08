@@ -1,23 +1,25 @@
 @echo off
-echo Uninstalling Vyom...
+title Vyom Uninstaller
 
-REM Check for admin privileges
-net session >nul 2>&1
-if %errorLevel% neq 0 (
-    echo Please run this file as Administrator.
-    pause
-    exit /b
+echo ----------------------------------------
+echo Vyom Uninstallation
+echo ----------------------------------------
+echo.
+
+set INSTALL_DIR=C:\Vyom
+
+if exist "%INSTALL_DIR%" (
+    echo Removing installation files...
+    rmdir /S /Q "%INSTALL_DIR%"
+) else (
+    echo Vyom is not installed.
 )
-
-REM Remove folder
-if exist C:\Vyom (
-    rmdir /s /q C:\Vyom
-)
-
-REM Remove from PATH
-setx PATH "%PATH:C:\Vyom;=%" /M >nul
 
 echo.
-echo ❌ Vyom uninstalled successfully.
+echo Vyom has been removed from this system.
+echo.
+echo NOTE:
+echo If Vyom was added to PATH, you may need
+echo to remove C:\Vyom manually from PATH.
 echo.
 pause

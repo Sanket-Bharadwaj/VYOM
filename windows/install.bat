@@ -1,27 +1,32 @@
 @echo off
-echo Installing Vyom...
+title Vyom Installer v0.2
 
-REM Check for admin privileges
-net session >nul 2>&1
-if %errorLevel% neq 0 (
-    echo Please run this file as Administrator.
-    pause
-    exit /b
+echo ----------------------------------------
+echo Vyom v0.2 Installation
+echo ----------------------------------------
+echo.
+
+set INSTALL_DIR=C:\Vyom
+
+echo Creating installation directory...
+if not exist "%INSTALL_DIR%" (
+    mkdir "%INSTALL_DIR%"
 )
 
-REM Create install directory
-if not exist C:\Vyom (
-    mkdir C:\Vyom
-)
+echo Copying Vyom executable...
+copy /Y "%~dp0vyom.exe" "%INSTALL_DIR%\vyom.exe" >nul
 
-REM Copy executable
-copy vyom.exe C:\Vyom\vyom.exe >nul
-
-REM Add to PATH
-setx PATH "%PATH%;C:\Vyom" /M >nul
+echo Registering Vyom in system PATH...
+setx PATH "%PATH%;%INSTALL_DIR%" >nul
 
 echo.
-echo ✅ Vyom installed successfully!
-echo You can now run: vyom test.vy
+echo Installation completed successfully.
+echo.
+echo You can now run Vyom from any terminal using:
+echo     vyom test.vy
+echo.
+echo NOTE:
+echo Please restart Command Prompt or PowerShell
+echo for PATH changes to take effect.
 echo.
 pause

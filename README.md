@@ -10,10 +10,10 @@ Vyom is a **learning-first language** — ideal for understanding how programmin
 
 ## ✅ Who is Vyom for?
 
-- Beginners learning how programming languages work  
-- Students exploring interpreters & compilers  
-- Developers who want a tiny scripting language  
-- Anyone curious about language design  
+- Beginners learning how programming languages work
+- Students exploring interpreters & compilers
+- Developers who want a tiny scripting language
+- Anyone curious about language design
 
 ---
 
@@ -46,13 +46,14 @@ This release establishes a stable and usable foundation.
 
 👉 **[Download Vyom-0.2-Windows.zip](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.2/Vyom-0.2-Windows.zip)**
 
-Includes:
-- `vyom.exe`
-- `install.bat`
-- `uninstall.bat`
+This package includes:
+
+- `vyom.exe` — Vyom interpreter
+- `install.bat` — system installer
+- `uninstall.bat` — uninstaller
 - example programs
 
-No compiler required.
+No compiler or additional setup is required.
 
 ---
 
@@ -107,6 +108,7 @@ gcc src/vy.c -o vyom
 ## 🛣 Roadmap
 
 ### v0.3 (planned)
+
 - Functions (`def`)
 - Local scope
 - Lists / arrays
