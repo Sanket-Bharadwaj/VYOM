@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Vyom banner" />
+</p>
+
 # 🌌 Vyom — Minimal Scripting Language (v0.2)
 
 Created and maintained by **Sanket Bharadwaj**
