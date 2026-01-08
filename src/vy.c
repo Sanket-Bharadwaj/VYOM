@@ -1,3 +1,6 @@
+// Vyom Programming Language
+// Created by Sanket Bharadwaj
+// https://github.com/Sanket-Bharadwaj/VYOM
 // Vyom v0.2 — Stability Core
 // Assignment using '=' only, case-sensitive variables,
 // whitespace-tolerant parsing, human-friendly errors.

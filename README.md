@@ -1,5 +1,7 @@
 # 🌌 Vyom — Minimal Scripting Language (v0.2)
 
+Created and maintained by Sanket Bharadwaj
+
 Vyom is a small, indentation‑based scripting language written in C, focused on **simplicity, readability, and predictable behavior**.
 
 Vyom is designed as a **learning‑first language** — easy to read, easy to reason about, and easy to extend.
