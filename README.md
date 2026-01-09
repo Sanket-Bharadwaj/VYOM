@@ -90,19 +90,21 @@ def greet():
 
 ---
 
-## ⬇️ Download (Windows)
+## ⬇️ Download
 
-Download the prebuilt Windows packages from the GitHub Releases page:
+Download prebuilt packages and build-from-source options for the three supported OS targets.
+
+### Windows
 
 - **v0.3 (stable):** [Vyom v0.3 - Windows ZIP](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.3/Vyom-0.3-Windows.zip)
 - **v0.2:** [Vyom v0.2 - Windows ZIP](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.2/Vyom-0.2-Windows.zip)
 
-Notes
+#### Notes
 
 - Verify downloads on the official release page before running binaries.
 - If you want checksum or signing info added here, provide them and I'll include verification steps.
 
-Installation (Windows)
+#### Installation
 
 1. Download the ZIP for the desired version and extract it to a folder (for example `C:\Vyom`).
 2. (Optional) Run `install.bat` as Administrator to copy `vyom.exe` to a system location and add it to your PATH.
@@ -112,7 +114,7 @@ Installation (Windows)
 vyom examples\main.vy
 ```
 
-Contents of the ZIP
+#### Contents
 
 - `vyom.exe`
 - `install.bat`
@@ -120,14 +122,54 @@ Contents of the ZIP
 - `README.md`
 - `examples/main.vy`
 
-Uninstall
+#### Uninstall
 
 - Run `uninstall.bat` from the extracted folder (or remove the installed files manually).
 
-Troubleshooting
+#### Troubleshooting
 
 - If `vyom` is not recognized after running `install.bat`, open a new terminal session or add the install directory to your PATH manually.
 - If you prefer to run without installing, run `vyom.exe` from the extracted folder.
+
+### macOS
+
+#### Prebuilt / Releases
+
+- Currently there are no official macOS prebuilt binaries. The recommended method is to build from source.
+
+#### Installation
+
+```bash
+gcc src/vy.c -o vyom
+chmod +x vyom
+# Optional (system-wide):
+sudo mv vyom /usr/local/bin/
+```
+
+#### Notes
+
+- After installing to `/usr/local/bin`, open a new terminal or run `hash -r` so the shell picks up `vyom`.
+- If building fails, ensure Xcode command line tools are installed: `xcode-select --install`.
+
+### Linux
+
+#### Prebuilt / Releases
+
+- No official Linux binary releases yet; build from source is recommended.
+
+#### Installation
+
+```bash
+gcc src/vy.c -o vyom
+chmod +x vyom
+# Optional (system-wide):
+sudo mv vyom /usr/local/bin/
+```
+
+#### Notes
+
+- Ensure `build-essential` (or equivalent) is installed: `sudo apt install build-essential`.
+- If `vyom` isn't found after installing system-wide, open a new shell or add the install path to `PATH`.
 
 ---
 
