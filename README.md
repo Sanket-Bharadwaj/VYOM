@@ -21,23 +21,14 @@ It is intentionally simple, stable, and approachable.
 
 ---
 
-## ✅ Who is Vyom for?
-
-- Beginners learning how programming languages work
-- Students exploring interpreters & compilers
-- Developers who want a tiny scripting language
-- Anyone curious about language design
-
----
-
 ## 🚀 Current Version
 
-**Vyom v0.2 — Stability Core**
+**Vyom v0.3 — Stable**
 
-This release establishes a stable and usable foundation.
+This release builds directly on the v0.2 stability core and introduces **typed variables** and
+**function definitions**, without breaking existing behavior.
 
 ---
-## ✨ Features (v0.1)
 
 ## ✨ Features (v0.1)
 
@@ -49,9 +40,9 @@ This release establishes a stable and usable foundation.
 - `repeat N:`
 - Comments using `#`
 - Indentation-based blocks
-- Simple, predictable execution model
 - Command-line flags: `--version`, `--help`
 
+---
 
 ## ✨ Features (v0.2)
 
@@ -63,117 +54,43 @@ This release establishes a stable and usable foundation.
 - `if / elif / else`
 - `repeat`
 - `exit`
-- Comments using `#`
-- Indentation-based blocks
 - Human-friendly error messages
-- Command-line flags: `--version`, `--help`
 
+---
 
 ## ✨ Features (v0.3)
 
-- Function definitions using `def`
-- Function calls with arguments
-- `return` statement
-- Local variable scope inside functions
-- Explicit global variable access using `global`
-- Optional explicit typing:
+- Optional explicit typed variables:
   - `int`
   - `double`
   - `string`
-- Whitespace-tolerant syntax in functions and calls
-- Improved execution structure for better performance
-- Clear errors for:
-  - Undefined variables
-  - Invalid assignments
-  - Type misuse
-- Fully progressive example file (`main.vy`) demonstrating all features
-
----
-
-## ⬇️ Download (Windows)
-
-👉 **[Download Vyom-0.2-Windows.zip](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.2/Vyom-0.2-Windows.zip)**
-
-This package includes:
-
-- `vyom.exe` — Vyom interpreter
-- `install.bat` — system installer
-- `uninstall.bat` — uninstaller
-- example programs
-
-No compiler or additional setup is required.
-
----
-
-## ▶️ Quick Start (Windows)
-
-### 1️⃣ Install (one time)
-
-1. Extract the ZIP file
-2. Double-click `install.bat`
-3. Restart your terminal
-
----
-
-### 2️⃣ Write a Vyom program
-
-Create a file `main.vy`:
+- Typed variables are type-locked
+- Dynamic (untyped) variables still supported
+- Function definitions using `def`
+- Functions are parsed and stored (not executed)
+- Clear type errors for invalid assignments
+- Stable execution model preserved from v0.2
 
 ```vy
-print "Hello, Vyom!"
+x = 10
+
+int a = 10
+double b = 2.5
+string c = "Hello Vyom"
+
+def greet():
+    print "Hello from Vyom"
 ```
 
-For more examples, visit the [EXAMPLES](https://github.com/Sanket-Bharadwaj/VYOM/tree/main/examples)
+> ⚠️ Function calls and `return` are intentionally **not supported in v0.3**.  
+> They will be introduced cleanly in **v0.4**.
 
 ---
 
-### 3️⃣ Run it
+## ▶️ Quick Start
 
-```cmd
+```bash
 vyom main.vy
-```
-
----
-
-## 📂 Examples
-
-Vyom uses a **single progressive example file** that demonstrates the language step-by-step.
-
-### `examples/main.vy` (Recommended)
-
-This is the **official demo file** for Vyom v0.2.  
-It shows language features in a clean, learning-friendly order:
-
-- variables & assignment
-- expressions
-- string concatenation
-- type checking
-- conditionals
-- loops (`repeat`)
-
-👉 New users should start here.
-
----
-
-### About `test.vy` (Internal)
-
-Earlier versions used a `test.vy` file containing:
-- runtime errors
-- invalid syntax
-- edge cases
-
-This file is **not included in v0.2 releases** to avoid confusing users.
-
-Advanced users can create their own test files if needed.
-
----
-
-## ⚙️ Power Users
-
-You can also run `vyom.exe` directly without installation:
-
-```cmd
-vyom.exe main.vy
 ```
 
 ---
@@ -188,9 +105,10 @@ gcc src/vy.c -o vyom
 
 ## 🛣 Roadmap
 
-### v0.3 (planned)
+### v0.4 (planned)
 
-- Functions (`def`)
+- Function calls
+- `return`
 - Local scope
 - Lists / arrays
 - Improved expression engine

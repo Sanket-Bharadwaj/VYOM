@@ -1,57 +1,27 @@
 # =========================================
 # Vyom v0.3 — main.vy
-# Progressive language demonstration
-# This file grows as Vyom evolves
+# Official stable demonstration
 # =========================================
 
 
 # -----------------------------------------
-# 1️⃣ Basic values & assignment (dynamic)
+# 1️⃣ Dynamic variables
 # -----------------------------------------
 
 x = 10
 y = 5
-name = "Vyom"
 
-print "x = " + x
-print "y = " + y
-print "name = " + name
+print x
+print y
 
 
 # -----------------------------------------
-# 2️⃣ Expressions
-# -----------------------------------------
-
-sum = x + y
-product = x * y
-
-print "sum = " + sum
-print "product = " + product
-
-
-# -----------------------------------------
-# 3️⃣ String concatenation
-# -----------------------------------------
-
-print name + " Lang"
-print "x + y = " + sum
-
-
-# -----------------------------------------
-# 4️⃣ Type inspection
-# -----------------------------------------
-
-print type(x)
-print type(name)
-
-
-# -----------------------------------------
-# 5️⃣ Explicit typed variables (v0.3)
+# 2️⃣ Typed variables (NEW in v0.3)
 # -----------------------------------------
 
 int a = 10
 double b = 2.5
-string c = "Hello"
+string c = "Hello Vyom"
 
 print a
 print b
@@ -59,69 +29,36 @@ print c
 
 
 # -----------------------------------------
-# 6️⃣ Conditionals
+# 3️⃣ Re-assignment rules
 # -----------------------------------------
 
-if a > x:
-    print "a is greater than x"
-elif a == x:
-    print "a equals x"
-else:
-    print "a is smaller than x"
+a = 20        # ✅ allowed
+# a = "oops"  # ❌ Type Error (intentional)
+
+print a
 
 
 # -----------------------------------------
-# 7️⃣ Loops (repeat)
+# 4️⃣ Function definitions (parsed only)
 # -----------------------------------------
 
-repeat 2:
-    print "loop iteration"
-    print a
+def greet():
+    print "Hello from function"
 
-
-# -----------------------------------------
-# 8️⃣ Functions
-# -----------------------------------------
-
-def add(p, q):
-    return p + q
-
-result = add(3, 4)
-print "add result = " + result
-
-print add(10, 20)
-
-
-# -----------------------------------------
-# 9️⃣ Local scope
-# -----------------------------------------
+def show(v):
+    print v
 
 def local_demo():
     temp = 99
     print temp
 
-local_demo()
-
-# print temp   # ❌ Error (local variable)
-
-
-# -----------------------------------------
-# 🔟 Global variable usage
-# -----------------------------------------
-
-counter = 0
-
-def increment():
-    global counter
-    counter = counter + 1
-
-increment()
-increment()
-print "counter = " + counter
+# NOTE:
+# Function CALLS are intentionally NOT supported in v0.3.
+# They will be added cleanly in v0.4.
 
 
 # -----------------------------------------
-# 1️⃣1️⃣ Graceful termination
+# 5️⃣ End
 # -----------------------------------------
 
-print "End of main.vy — Vyom v0.3 demo"
+print "End of main.vy — Vyom v0.3"
