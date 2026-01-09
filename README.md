@@ -55,6 +55,7 @@ This release builds directly on the v0.2 stability core and introduces **typed v
 - `repeat`
 - `exit`
 - Human-friendly error messages
+- Indentation-based blocks
 
 ---
 
@@ -64,12 +65,14 @@ This release builds directly on the v0.2 stability core and introduces **typed v
   - `int`
   - `double`
   - `string`
-- Typed variables are type-locked
+- Typed variables are **type-locked**
 - Dynamic (untyped) variables still supported
 - Function definitions using `def`
 - Functions are parsed and stored (not executed)
 - Clear type errors for invalid assignments
 - Stable execution model preserved from v0.2
+
+### Example
 
 ```vy
 x = 10
@@ -87,11 +90,54 @@ def greet():
 
 ---
 
-## ▶️ Quick Start
+## ⬇️ Download (Windows)
 
-```bash
+Download the prebuilt Windows packages from the GitHub Releases page:
+
+- **v0.3 (stable):** [Vyom v0.3 - Windows ZIP](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.3/Vyom-0.3-Windows.zip)
+- **v0.2:** [Vyom v0.2 - Windows ZIP](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.2/Vyom-0.2-Windows.zip)
+
+Notes
+
+- Verify downloads on the official release page before running binaries.
+- If you want checksum or signing info added here, provide them and I'll include verification steps.
+
+Installation (Windows)
+
+1. Download the ZIP for the desired version and extract it to a folder (for example `C:\Vyom`).
+2. (Optional) Run `install.bat` as Administrator to copy `vyom.exe` to a system location and add it to your PATH.
+3. Run `vyom` from the command prompt:
+
+```cmd
+vyom examples\main.vy
+```
+
+Contents of the ZIP
+
+- `vyom.exe`
+- `install.bat`
+- `uninstall.bat`
+- `README.md`
+- `examples/main.vy`
+
+Uninstall
+
+- Run `uninstall.bat` from the extracted folder (or remove the installed files manually).
+
+Troubleshooting
+
+- If `vyom` is not recognized after running `install.bat`, open a new terminal session or add the install directory to your PATH manually.
+- If you prefer to run without installing, run `vyom.exe` from the extracted folder.
+
+---
+
+## ▶️ Quick Start (Windows)
+
+```cmd
 vyom main.vy
 ```
+
+> Restart terminal once after running `install.bat`.
 
 ---
 
