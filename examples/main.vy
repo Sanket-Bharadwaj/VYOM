@@ -1,12 +1,12 @@
 # =========================================
-# Vyom v0.2 — main.vy
+# Vyom v0.3 — main.vy
 # Progressive language demonstration
-# This file grows over time with new features
+# This file grows as Vyom evolves
 # =========================================
 
 
 # -----------------------------------------
-# 1️⃣ Basic values & assignment
+# 1️⃣ Basic values & assignment (dynamic)
 # -----------------------------------------
 
 x = 10
@@ -46,28 +46,82 @@ print type(name)
 
 
 # -----------------------------------------
-# 5️⃣ Conditionals
+# 5️⃣ Explicit typed variables (v0.3)
 # -----------------------------------------
 
-if x > y:
-    print "x is greater than y"
-elif x == y:
-    print "x equals y"
+int a = 10
+double b = 2.5
+string c = "Hello"
+
+print a
+print b
+print c
+
+
+# -----------------------------------------
+# 6️⃣ Conditionals
+# -----------------------------------------
+
+if a > x:
+    print "a is greater than x"
+elif a == x:
+    print "a equals x"
 else:
-    print "y is greater than x"
+    print "a is smaller than x"
 
 
 # -----------------------------------------
-# 6️⃣ Loops (repeat)
+# 7️⃣ Loops (repeat)
 # -----------------------------------------
 
 repeat 2:
     print "loop iteration"
-    print x
+    print a
 
 
 # -----------------------------------------
-# 7️⃣ Graceful termination
+# 8️⃣ Functions
 # -----------------------------------------
 
-print "End of main.vy"
+def add(p, q):
+    return p + q
+
+result = add(3, 4)
+print "add result = " + result
+
+print add(10, 20)
+
+
+# -----------------------------------------
+# 9️⃣ Local scope
+# -----------------------------------------
+
+def local_demo():
+    temp = 99
+    print temp
+
+local_demo()
+
+# print temp   # ❌ Error (local variable)
+
+
+# -----------------------------------------
+# 🔟 Global variable usage
+# -----------------------------------------
+
+counter = 0
+
+def increment():
+    global counter
+    counter = counter + 1
+
+increment()
+increment()
+print "counter = " + counter
+
+
+# -----------------------------------------
+# 1️⃣1️⃣ Graceful termination
+# -----------------------------------------
+
+print "End of main.vy — Vyom v0.3 demo"

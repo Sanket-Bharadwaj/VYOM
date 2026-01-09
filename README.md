@@ -39,6 +39,8 @@ This release establishes a stable and usable foundation.
 ---
 ## ✨ Features (v0.1)
 
+## ✨ Features (v0.1)
+
 - Variable assignment using `set`
 - Numbers & strings
 - Basic math expressions (`+ - * /`)
@@ -49,6 +51,7 @@ This release establishes a stable and usable foundation.
 - Indentation-based blocks
 - Simple, predictable execution model
 - Command-line flags: `--version`, `--help`
+
 
 ## ✨ Features (v0.2)
 
@@ -64,6 +67,26 @@ This release establishes a stable and usable foundation.
 - Indentation-based blocks
 - Human-friendly error messages
 - Command-line flags: `--version`, `--help`
+
+
+## ✨ Features (v0.3)
+
+- Function definitions using `def`
+- Function calls with arguments
+- `return` statement
+- Local variable scope inside functions
+- Explicit global variable access using `global`
+- Optional explicit typing:
+  - `int`
+  - `double`
+  - `string`
+- Whitespace-tolerant syntax in functions and calls
+- Improved execution structure for better performance
+- Clear errors for:
+  - Undefined variables
+  - Invalid assignments
+  - Type misuse
+- Fully progressive example file (`main.vy`) demonstrating all features
 
 ---
 
