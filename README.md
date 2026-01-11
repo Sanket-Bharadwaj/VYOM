@@ -96,8 +96,13 @@ Download prebuilt packages and build-from-source options for the three supported
 
 ### Windows
 
-- **v0.3 (stable):** [Vyom v0.3 - Windows ZIP](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.3/Vyom-0.3-Windows.zip)
-- **v0.2:** [Vyom v0.2 - Windows ZIP](https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.2/Vyom-0.2-Windows.zip)
+### Windows Releases
+
+- **Vyom v0.3 (Stable)**  
+  👉 https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.3/Vyom-0.3-Windows.zip
+
+- **Vyom v0.2 (Stability Core)**  
+  👉 https://github.com/Sanket-Bharadwaj/VYOM/releases/download/v0.2/Vyom-0.2-Windows.zip
 
 #### Notes
 
