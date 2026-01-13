@@ -193,7 +193,6 @@ vyom main.vy
 ```bash
 gcc src/vy.c -o vyom
 ```
-
 ---
 
 ## 🛣 Roadmap
